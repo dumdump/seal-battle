@@ -1,0 +1,111 @@
+body {
+    background-color: dimgray;
+    margin: 0px;
+}
+
+.fight-container {
+    height: 1000px;
+    margin-top: 100px;
+}
+
+.fight-container .player-section {
+    height: 625px;
+    display: block;
+}
+
+.fight-container img {
+    height: 275px;
+    background-color: white;
+    border: 10px ridge black;
+    padding: 10px
+}
+
+.fight-container .player-section #choices-btns {
+    margin: 50px 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.fight-container .player-section #choices-btns a {
+    padding: 10px 40px;
+    border: 1px solid black;
+    font-family: "gill sans", "arial", "helvetica", sans-serif;
+}
+
+.fight-container .player-section .choices-btns-my-turn a:hover {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fight-container .player-section .choices-btns-enemy-turn a {
+    opacity: 0.5;
+}
+
+.fight-container .player-section #choices-btns #attack-btn {
+    background-color: darkgreen;
+}
+
+.fight-container .player-section #choices-btns #defend-btn{
+    background-color: darkred;
+}
+
+.fight-container .player-section #choices-btns #dodge-btn{
+    background-color: darkgoldenrod;
+}
+
+.fight-container .enemy-section {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 350px;
+}
+
+.fight-container .enemy-section .enemy-section-right {
+    align-content: flex-end;
+    text-align: right;
+    width: 50%;
+    overflow: hidden;
+}
+
+.fight-container .enemy-section .enemy-section-left {
+    align-content: flex-start;
+    text-align: left;
+    width: 50%;
+}
+
+.fight-container .enemy-section .enemy-section-left .enemy-stats-section {
+    margin: 50px;
+}
+
+.fight-container .enemy-section .enemy-section-left .enemy-stats {
+    font-size: 25px;
+    font-family: "Gill Sans", "arial", "helvetica", sans-serif;
+    color: darkred;
+}
+
+.fight-container .player-section-top {
+    display: flex;
+}
+
+.fight-container .player-section-top-left {
+    width: 50%;
+    overflow: hidden;
+}
+
+.fight-container .player-section-top-right {
+    width: 50%;
+}
+
+.fight-container .player-section-top-right .player-stats-section {
+    margin: 50px;
+    text-align: right;
+}
+
+.fight-container .player-section-top-right .player-stats-section .player-stats {
+    font-size: 25px;
+    font-family: "Gill Sans", "arial", "helvetica", sans-serif;
+    color: darkblue;
+}
+
+.feedback-container {
+    margin-top: 50px;
+}
