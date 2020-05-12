@@ -27,7 +27,7 @@ let Seal = function(name, type, health, attackP, defenseP, dodgeP, speed, oppone
 };
 //seals
 let playerSeal = new Seal('Player', 'water', 30, 10, 10, 10, 'enemy', true, 'move');
-let enemySeal = new Seal('Jian Jiao', 'fire', 30, 10, 10, 10, 'enemy', false, 'move');
+let enemySeal = new Seal('Jian Jiao', 'fire', 35, 20, 20, 20, 'enemy', false, 'move');
 enemySeal.opponent = playerSeal;
 playerSeal.opponent = enemySeal;
 //enemy move
