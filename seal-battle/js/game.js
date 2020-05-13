@@ -27,7 +27,7 @@ let Seal = function(name, type, health, attackP, defenseP, dodgeP, speed, oppone
 };
 //seals
 let playerSeal = new Seal('Player', 'water', 30, 10, 10, 10, 'enemy', true, 'move');
-let enemySeal = new Seal('Jian Jiao', 'fire', 35, 20, 20, 20, 'enemy', false, 'move');
+let enemySeal = new Seal('Jian Jiao', 'fire', 35, 15, 20, 20, 'enemy', false, 'move');
 enemySeal.opponent = playerSeal;
 playerSeal.opponent = enemySeal;
 //enemy move
@@ -92,20 +92,28 @@ function processMoves() {
             enemySeal.opponent.health = enemySeal.opponent.health - enemySeal.attackP;
             break;
         case 1:
-            playerSeal.opponent.health = playerSeal.opponent.health - playerSeal.attackP;
-            enemySeal.health = enemySeal.health + (enemySeal.opponent.attackP / (enemySeal.defenseP / 5));
+            playerSeal.opponent.health = playerSeal.opponent.health - enemySeal.opponent.attackP / (enemySeal.defenseP / 5);
             break;
         case 2:
+            let n = Math.floor((Math.random() * 10) + 1);
+            if (n > enemySeal.dodgeP / 3) {
+                enemySeal.health = enemySeal.health - enemySeal.opponent.attackP; 
+                feedback.textContent = enemySeal.name + " got stranded and couldn't dodge " + playerSeal.name + "'s attack!";
+            };
             break;
         case 3:
-            enemySeal.opponent.health = enemySeal.opponent.health - enemySeal.attackP;
-            playerSeal.health = playerSeal.health + (playerSeal.opponent.attackP / (playerSeal.defenseP / 5));
+            enemySeal.opponent.health = enemySeal.opponent.health - playerSeal.opponent.attackP / (playerSeal.defenseP / 5);
             break;
         case 4:
             break;
         case 5:
             break;
         case 6:
+            let z = Math.floor((Math.random() * 10) + 1);
+            if (z > playerSeal.dodgeP / 3) {
+                playerSeal.health = playerSeal.health - playerSeal.opponent.attackP; 
+                feedback.textContent = playerSeal.name + " got stranded and couldn't dodge " + enemySeal.name + "'s attack!";
+            };
             break;
         case 7:
             break;
