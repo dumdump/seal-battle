@@ -1,6 +1,12 @@
 body {
     background-color: dimgray;
     margin: 0px;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+body h1 {
+    font-weight: 100;
 }
 
 .fight-container {
@@ -108,4 +114,7 @@ body {
 
 .feedback-container {
     margin-top: 50px;
+    text-align: center;
+    font-family: 'Andale Mono', monospace;
+    font-size: 40px;
 }
